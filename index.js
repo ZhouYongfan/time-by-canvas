@@ -12,6 +12,17 @@ var curShowTimeSeconds = 0;
 var balls =[];
 
 window.onload = function() {
+
+    DAYS_MARGIN_TOP = Math.round(WINDOW_HEIGHT / 20);
+
+    WINDOW_WIDTH = document.body.clientWidth;
+    WINDOW_HEIGHT = document.body.clientHeight;
+    MARGIN_LEFT = Math.round(WINDOW_WIDTH / 10);
+    RADIUS = Math.round(WINDOW_WIDTH * 4 / 5 / 107) - 1;
+    MARGIN_TOP = DAYS_MARGIN_TOP + 2 * 10 * RADIUS + 10 * RADIUS;
+
+    DAYS_MARGIN_LEFT = MARGIN_LEFT + 2 * (7 * 2 * (RADIUS + 1) + (RADIUS + 1));
+
     var canvas = document.getElementById("canvas");
 
     canvas.width = WINDOW_WIDTH;

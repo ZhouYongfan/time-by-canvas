@@ -1,5 +1,11 @@
+body {
+    height: 100%;
+}
+
 #canvas {
     /* border: 1px solid #aaa; */
-    display: block;
-    margin: auto;
+    /* display: block;
+    margin: auto; */
+    height: 100%;
+    width: 100%;
 }
