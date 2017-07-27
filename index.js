@@ -34,7 +34,7 @@ window.onload = function() {
 
     curShowTimeSeconds = getCurrentShowTimeSeconds();
 
-    setInterval(function() {
+    var intervalId = setInterval(function() {
         render(context);
         update();
     }, 16.7);
@@ -186,3 +186,16 @@ function renderDigit(x, y, num, cxt) {
         }
     }
 }
+
+//获得焦点
+window.onfocus = function() {
+    intervalId = setInterval(function() {
+        render(context);
+        update();
+    }, 16.7);
+};
+     
+//失去焦点
+window.onblur = function() {
+    clearInterval(intervalId);
+};
