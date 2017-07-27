@@ -96,6 +96,17 @@ function updateBalls() {
             balls[i].vy = - balls[i].vy * 0.7;
         }
     }
+
+    var cnt = 0;
+    for(let i = 0; i < balls.length; i++) {
+        if(balls[i].x + RADIUS > 0 && balls[i].x - RADIUS < WINDOW_WIDTH) {
+            balls[cnt++] = balls[i];
+        }
+    }
+
+    while(balls.length > Math.min(cnt, 300)) {
+        balls.pop();
+    }
 }
 
 function addBalls(x, y, num) {
