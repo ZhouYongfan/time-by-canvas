@@ -18,7 +18,7 @@ window.onload = function() {
     WINDOW_WIDTH = document.body.clientWidth;
     WINDOW_HEIGHT = document.body.clientHeight;
     MARGIN_LEFT = Math.round(WINDOW_WIDTH / 10);
-    RADIUS = Math.round(WINDOW_WIDTH * 4 / 5 / 107) - 1;
+    RADIUS = Math.round(WINDOW_WIDTH * 4 / 5 / 108) - 1;
     MARGIN_TOP = DAYS_MARGIN_TOP + 2 * 10 * RADIUS + 10 * RADIUS;
 
     DAYS_MARGIN_LEFT = MARGIN_LEFT + 2 * (7 * 2 * (RADIUS + 1) + (RADIUS + 1));
@@ -159,8 +159,8 @@ function render(cxt) {
     renderDigit(MARGIN_LEFT + 3 * (7 * 2 * (RADIUS + 1) + (RADIUS + 1)) + 4 * 2 * (RADIUS + 1) + (RADIUS + 1), MARGIN_TOP, minutes % 10, cxt);
     renderDigit(MARGIN_LEFT + 4 * (7 * 2 * (RADIUS + 1) + (RADIUS + 1)) + 4 * 2 * (RADIUS + 1) + (RADIUS + 1), MARGIN_TOP, 10, cxt);
 
-    renderDigit(MARGIN_LEFT + 4 * (7 * 2 * (RADIUS + 1) + (RADIUS + 1)) + 2 * 4 * 2 * (RADIUS + 1) + (RADIUS + 1), MARGIN_TOP, ~~(seconds / 10), cxt);
-    renderDigit(MARGIN_LEFT + 5 * (7 * 2 * (RADIUS + 1) + (RADIUS + 1)) + 2 * 4 * 2 * (RADIUS + 1) + (RADIUS + 1), MARGIN_TOP, seconds % 10, cxt);
+    renderDigit(MARGIN_LEFT + 4 * (7 * 2 * (RADIUS + 1) + (RADIUS + 1)) + 2 * 4 * 2 * (RADIUS + 1) + 2 * (RADIUS + 1), MARGIN_TOP, ~~(seconds / 10), cxt);
+    renderDigit(MARGIN_LEFT + 5 * (7 * 2 * (RADIUS + 1) + (RADIUS + 1)) + 2 * 4 * 2 * (RADIUS + 1) + 2 * (RADIUS + 1), MARGIN_TOP, seconds % 10, cxt);
 
     for(let i = 0; i < balls.length; i++) {
         cxt.fillStyle = balls[i].color;
